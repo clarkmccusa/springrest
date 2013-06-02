@@ -21,6 +21,7 @@ import com.mcc.springrest.service.BookService;
 public class BookController {
 
 	@Autowired BookService bookService;
+	
 	@RequestMapping( value="/books/{bookId}", method=RequestMethod.DELETE)
 	@ResponseStatus(value=HttpStatus.NO_CONTENT)
 	public void deleteBook( @PathVariable("bookId") Long bookId ){
